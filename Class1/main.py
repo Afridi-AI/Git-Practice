@@ -1,19 +1,7 @@
 import random
 
 
-def play_round() -> bool:
-    secret_number = random.randint(1, 100)
-    attempts = 0
-
-    print("\nI'm thinking of a number from 1 to 100.")
-
-    while True:
-        guess_text = input("Your guess: ").strip()
-        try:
-            guess = int(guess_text)
-        except ValueError:
-            print("Please enter a whole number.")
-            continue
+   
 
         if not 1 <= guess <= 100:
             print("Choose a number between 1 and 100.")
